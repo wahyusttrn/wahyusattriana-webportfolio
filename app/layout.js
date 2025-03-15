@@ -1,6 +1,7 @@
 import { Lexend, League_Gothic } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar"
+import Footer from "./components/Footer";
 
 const lexend = Lexend({
   variable: "--font-lexend",
@@ -25,6 +26,7 @@ export default function RootLayout({ children }) {
       >
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

@@ -47,10 +47,10 @@ export default function Navbar() {
         </div>
       </div>
 
-      <div className={menuOpen ? "fixed md:hidden w-screen h-screen bg-(--color-foreground) opacity-15 duration-200 z-10" : "fixed ease-in w-screen h-screen duration-200"}></div>
+      <div className={menuOpen ? "fixed md:hidden w-screen h-screen bg-(--color-foreground) opacity-15 duration-200 z-10" : "fixed ease-in w-0 h-0 duration-200 z-10"}></div>
 
       <nav className="fixed w-full h-20 font-[family-name:var(--font-lexend)] bg-(--color-background)">
-        <div className="flex justify-between items-center w-full h-full px-14 sm:px-24">
+        <div className="flex justify-between items-center w-full h-full px-14 md:px-24">
           <Link className="h-full flex items-center" href="">
             <h1 className="text-2xl font-extrabold tracking-[-3px]">wahyusttrn.</h1>
           </Link>

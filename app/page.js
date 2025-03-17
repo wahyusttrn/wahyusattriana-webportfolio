@@ -17,7 +17,7 @@ export default function Home() {
   ]
   return (
     <div className="flex flex-col items-center justify-center font-[family-name:var(--font-lexend)] overflow-hidden">
-      <main className="flex flex-col items-centerr justify-center h-screen w-[100vw]">
+      <main className="flex flex-col items-center justify-center h-screen w-[100vw]">
         <div className="md:h-[80vh] md:w-[90vw] flex flex-col items-center justify-center gap-3 m-0 md:mb-[-40vh]">
           <h2 className="font-[family-name:var(--font-lexend)] text-[3vw] md:text-[2vw]">Hi, my name is Wahyu Sattriana and i am a freelance</h2>
           <h1 className="font-[family-name:var(--font-league-gothic)] text-center text-[20vw]/[17vw] md:text-[16vw]/[13vw]">DESIGNER &<br/><span className="text-(--color-background) text-outline">WEBDEVELOPER</span></h1>

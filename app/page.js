@@ -6,18 +6,18 @@ export default function Home() {
   const socials = [
     { redirect: "https://www.instagram.com/wahyusttrn/", name: "Instagram", path: "/socials/Instagram.svg" },
     { redirect: "https://github.com/WahyuSattriana", name: "GitHub", path: "/socials/GitHub.svg" },
-    { redirect: "", name: "Linkedn", path: "/socials/Linkedn.svg" },
+    { redirect: "https://www.linkedin.com/in/wahyusattriana/", name: "Linkedn", path: "/socials/Linkedn.svg" },
     { redirect: "https://www.youtube.com/@wahyusattriana", name: "YouTube", path: "/socials/YouTube.svg" },
     { redirect: "https://dribbble.com/wahyusttrn", name: "Dribbble", path: "/socials/Dribbble.svg" },
-    { redirect: "", name: "Figma", path: "/socials/Figma.svg" },
+    { redirect: "https://www.figma.com/@wahyusattriana", name: "Figma", path: "/socials/Figma.svg" },
     { redirect: "https://pinterest.com/wahyusttrn/", name: "Pinterest", path: "/socials/Pinterest.svg" },
-    { redirect: "", name: "Behance", path: "/socials/Behance.svg" }, //change to shutterstock
+    { redirect: "https://www.shutterstock.com/g/wahyusttrn", name: "Shutterstock", path: "/socials/Shutterstock.svg" },
     { redirect: "https://lightroom.app.link/yrhgIKtuibb", name: "Lightroom", path: "/socials/Lightroom.svg" },
     { redirect: "https://medium.com/@wahyusattriana", name: "Medium", path: "/socials/Medium.svg" },
   ]
   return (
     <div className="flex flex-col items-center justify-center font-[family-name:var(--font-lexend)] overflow-hidden">
-      <main className="flex flex-col items-center justify-center h-screen w-[100vw]">
+      <main className="flex flex-col items-centerr justify-center h-screen w-[100vw]">
         <div className="md:h-[80vh] md:w-[90vw] flex flex-col items-center justify-center gap-3 m-0 md:mb-[-40vh]">
           <h2 className="font-[family-name:var(--font-lexend)] text-[3vw] md:text-[2vw]">Hi, my name is Wahyu Sattriana and i am a freelance</h2>
           <h1 className="font-[family-name:var(--font-league-gothic)] text-center text-[20vw]/[17vw] md:text-[16vw]/[13vw]">DESIGNER &<br/><span className="text-(--color-background) text-outline">WEBDEVELOPER</span></h1>
@@ -30,7 +30,7 @@ export default function Home() {
           </div>
         </div>
       </main>
-      <section className="flex flex-col md:flex-row items-center justify-center sm:h-[100vh] h-[60vh] w-[70vw] gap-[5vw] mb-16">
+      <section className="flex flex-col md:flex-row items-center justify-center sm:h-[100vh] h-[60vh] w-[70vw] gap-[5vw]">
         <div className="flex flex-col items-start justify-center sm:w-md md:order-2">
           <h1 className="font-semibold sm:text-2xl text-lg">Who am I?</h1>
           <p className="font-normal sm:text-sm text-xs text-justify">

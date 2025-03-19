@@ -20,7 +20,7 @@ export default function Home() {
       <main className="flex flex-col items-center justify-center h-screen w-[100vw]">
         <div className="md:h-[80vh] md:w-[90vw] flex flex-col items-center justify-center gap-3 m-0 md:mb-[-40vh]">
           <h2 className="font-[family-name:var(--font-lexend)] text-[3vw] md:text-[2vw]">Hi, my name is Wahyu Sattriana and i am a freelance</h2>
-          <h1 className="font-[family-name:var(--font-league-gothic)] text-center text-[20vw]/[17vw] md:text-[16vw]/[13vw]">DESIGNER &<br/><span className="text-(--color-background) text-outline">WEBDEVELOPER</span></h1>
+          <h1 className="font-[family-name:var(--font-league-gothic)] text-center text-[20vw]/[17vw] md:text-[16vw]/[13vw]">DESIGNER &<br/><span className="md:stext-(--color-background) text-(--color-foreground) md:text-outline">WEBDEVELOPER</span></h1>
         </div>
         <div className="w-screen flex items-center justify-center">
           <div className="flex justify-between items-baseline w-[70%]">
@@ -30,7 +30,7 @@ export default function Home() {
           </div>
         </div>
       </main>
-      <section className="flex flex-col md:flex-row items-center justify-center sm:h-[100vh] h-[60vh] w-[70vw] gap-[5vw]">
+      <section className="flex flex-col md:flex-row items-center justify-center sm:h-[100vh] h-[60vh] sm:w-[70vw] w-[85vw] gap-[5vw]">
         <div className="flex flex-col items-start justify-center sm:w-md md:order-2">
           <h1 className="font-semibold sm:text-2xl text-lg">Who am I?</h1>
           <p className="font-normal sm:text-sm text-xs text-justify">

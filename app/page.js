@@ -21,7 +21,7 @@ export default function Home() {
         <div className="md:h-[80vh] md:w-[90vw] flex flex-col items-center justify-center gap-3 mb-10 md:mb-[-40vh]">
           <h2 className="font-[family-name:var(--font-lexend)] text-[3vw] md:text-[2vw]">Hi, my name is Wahyu Sattriana and i am a freelance</h2>
           <h1 className="font-[family-name:var(--font-league-gothic)] text-center text-[20vw]/[17vw] md:text-[16vw]/[13vw]">DESIGNER &<br/><span className="md:text-(--color-background) text-(--color-foreground) text-outline">WEBDEVELOPER</span></h1>
-          <h3 className="font-light text-[2vw] sm:text-[1.5vw] sm:hidden">Based on Bali, Indonesia. Available to be hired.</h3>
+          <h3 className="font-light text-[3vw] md:text-[2vw] sm:hidden">Based on Bali, Indonesia. Available to be hired.</h3>
         </div>
         <div className="w-screen flex items-center justify-center">
           <div className="flex sm:justify-between justify-center items-baseline sm:w-[70%]">

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import PageTitle from "../components/PageTitle";
 
 export default function About() {
   const photos = [
@@ -9,9 +10,7 @@ export default function About() {
   ];
   return (
     <div className="flex flex-col items-center justify-center font-[family-name:var(--font-lexend)]">
-      <main className="sm:h-[80vh] h-[60vh] md:w-[90vw] flex flex-col items-center justify-center">
-        <h1 className="font-[family-name:var(--font-league-gothic)] text-center text-[20vw]/[17vw] md:text-[16vw]/[13vw]">CAREER</h1>
-      </main>
+      <PageTitle variant={"filled"}>CAREER</PageTitle>
       <section className="flex flex-col sm:flex-row sm:items-start items-center justify-center sm:w-[70vw] w-[85vw] md:gap-40 sm:gap-10 gap-10">
         <div className="sm:w-[200px] w-[75vw] h-auto flex sm:flex-col sm:gap-10 gap-2 sm:order-0 order-1 flex-wrap">
             {photos.map((photo, i) => (

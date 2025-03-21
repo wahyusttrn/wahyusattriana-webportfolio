@@ -51,7 +51,7 @@ export default function Navbar() {
 
       <nav className="fixed w-full h-20 font-[family-name:var(--font-lexend)] bg-(--color-background)">
         <div className="flex justify-between items-center w-full h-full px-14 md:px-24">
-          <Link className="h-full flex items-center" href="">
+          <Link className="h-full flex items-center" href="/">
             <h1 className="text-2xl font-extrabold tracking-[-3px]">wahyusttrn.</h1>
           </Link>
           <div className="hidden md:flex gap-[3vw]">

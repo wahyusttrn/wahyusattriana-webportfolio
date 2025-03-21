@@ -12,8 +12,10 @@
   --font-title: var(--font-league-gothic);
 }
 
-.text-outline {
-  -webkit-text-stroke: 0.3vh var(--foreground);
+@media only screen and (min-width: 768px) {
+  .text-outline {
+    -webkit-text-stroke: 0.3vh var(--foreground);
+  }
 }
 
 body {

@@ -5,7 +5,7 @@ import Button from "./components/Button";
 export default function Home() {
   const socials = [
     { redirect: "https://www.instagram.com/wahyusttrn/", name: "Instagram", path: "/socials/Instagram.svg" },
-    { redirect: "https://github.com/WahyuSattriana", name: "GitHub", path: "/socials/GitHub.svg" },
+    { redirect: "https://github.com/wahyusttrn", name: "GitHub", path: "/socials/GitHub.svg" },
     { redirect: "https://www.linkedin.com/in/wahyusattriana/", name: "Linkedn", path: "/socials/Linkedn.svg" },
     { redirect: "https://www.youtube.com/@wahyusattriana", name: "YouTube", path: "/socials/YouTube.svg" },
     { redirect: "https://dribbble.com/wahyusttrn", name: "Dribbble", path: "/socials/Dribbble.svg" },

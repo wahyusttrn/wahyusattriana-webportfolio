@@ -191,12 +191,12 @@ export default function HomePage() {
                 </Link>
               </Button>
               <Button variant="outline" size="icon" asChild>
-                <Link href="https://www.instagram.com/wahyusttrn">
+                <Link href="https://www.instagram.com/wahyusttrn" target="_blank">
                   <Instagram className="h-4 w-4" />
                 </Link>
               </Button>
               <Button variant="outline" size="icon" asChild>
-                <Link href="https://medium.com/@wahyusattriana">
+                <Link href="https://medium.com/@wahyusattriana" target="_blank">
                   <BookOpenText className="h-4 w-4" />
                 </Link>
               </Button>
@@ -331,7 +331,7 @@ export default function HomePage() {
             Feel free to just DM me right away!
           </p>
           <Button asChild>
-            <Link href="https://www.instagram.com/wahyusttrn">Chat me</Link>
+            <Link href="https://www.instagram.com/wahyusttrn" target="_blank">Chat me</Link>
           </Button>
         </section>
 

@@ -10,7 +10,6 @@ import { useEffect, useState, useRef } from "react";
 
 export default function HomePage() {
   const [animatedComponents, setAnimatedComponents] = useState(new Set());
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const observerRef = useRef();
 
   useEffect(() => {
@@ -47,8 +46,7 @@ export default function HomePage() {
       targetElement.scrollIntoView({
         behavior: "smooth",
         block: "start",
-      })
-      setMobileMenuOpen(false);
+      });
     }
   }
 
@@ -330,7 +328,7 @@ export default function HomePage() {
           <h2 className="scroll-m-20 text-2xl font-semibold tracking-tight mb-4">Get In Touch</h2>
           <p className="leading-7 mb-6">
             Hey, I'm always open to discuss new projects, creative ideas, or opportunities to be part of your vision.
-            You can contact me anywhere. If you feel you want to "chit-chat" first, you can just DM me right away!
+            Feel free to just DM me right away!
           </p>
           <Button asChild>
             <Link href="https://www.instagram.com/wahyusttrn">Chat me</Link>

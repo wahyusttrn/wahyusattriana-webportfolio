@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, Instagram, BookOpenText, ExternalLink, Code } from 'lucide-react';
+import { Github, Linkedin, Mail, Instagram, Youtube, BookOpenText, ExternalLink, Code } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import {
@@ -174,6 +174,16 @@ export default function HomePage() {
                   aria-label="Instagram Profile"
                 >
                   <Instagram className="h-4 w-4" />
+                </Link>
+              </Button>
+              <Button variant="outline" size="icon" asChild>
+                <Link
+                  href="https://www.youtube.com/@wahyusattriana"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="YouTube Channel"
+                >
+                  <Youtube className="h-4 w-4" />
                 </Link>
               </Button>
               <Button variant="outline" size="icon" asChild>

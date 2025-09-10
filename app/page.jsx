@@ -229,7 +229,10 @@ export default function HomePage() {
               of visual graphics.
             </p>
             <p className="leading-7">I am based in Bali, Indonesia and I'm very open to be hired anywhere (i think).</p>
-            <Link target="_blank" href={'https://drive.google.com/file/d/1fbgzUhBDCYL8RVGNnocttef5oEpg4wJx/view'}>
+            <Link
+              target="_blank"
+              href={'https://drive.google.com/file/d/16ei5IZldw67bnJLwzktjYKZPtb5bG3QC/view?usp=sharing'}
+            >
               <p className="leading-7 italic hover:underline">Curiculum Vitae (CV) / resume here.</p>
             </Link>
           </section>

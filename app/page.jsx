@@ -62,7 +62,7 @@ const experiences = [
 
 const educations = [
   {
-    school: 'Hactiv8 Indonesia',
+    school: 'Hacktiv8 Indonesia',
     role: 'Fullstack JavaScript Immersive Student',
     description: '',
     date: '2025 - 2025'
@@ -128,6 +128,47 @@ const projects = [
   }
 ];
 
+const socials = [
+  {
+    name: 'GitHub',
+    label: 'GitHub Profile',
+    link: 'https://github.com/wahyusttrn',
+    icon: Github
+  },
+  {
+    name: 'Linkedin',
+    label: 'Linkedin Profile',
+    link: 'https://linkedin.com/in/wahyusattriana',
+    icon: Linkedin
+  },
+  {
+    name: 'Email',
+    label: 'Send Email',
+    link: 'mailto:wahyusattriana@gmail.com',
+    icon: Mail
+  },
+  {
+    name: 'Instagram',
+    label: 'Instagram Profile',
+    link: 'https://www.instagram.com/wahyusttrn',
+    icon: Instagram
+  },
+  {
+    name: 'YouTube',
+    label: 'YouTube Profile',
+    link: 'https://www.youtube.com/@wahyusattriana',
+    icon: Youtube
+  },
+  {
+    name: 'Medium',
+    label: 'Medium Blog',
+    link: 'https://medium.com/@wahyusattriana',
+    icon: BookOpenText
+  }
+];
+
+const resume = 'https://drive.google.com/file/d/1Lnaed2orCFgy94QuyvDes6JkWySG7A-l/view?usp=sharing';
+
 export default function HomePage() {
   return (
     <div className="w-full flex flex-col justify-center items-center">
@@ -141,61 +182,15 @@ export default function HomePage() {
             <h1 className="scroll-m-20 text-5xl font-bold tracking-tight text-balance">Hi! I'm Wahyu Sattriana</h1>
             <h2 className="scroll-m-20 text-xl tracking-tight mb-4">An Overthinker Software Engineer</h2>
             <div className="flex space-x-4 mb-6">
-              <Button variant="outline" size="icon" asChild>
-                <Link
-                  href="https://github.com/wahyusttrn"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="GitHub Profile"
-                >
-                  <Github className="h-4 w-4" />
-                </Link>
-              </Button>
-              <Button variant="outline" size="icon" asChild>
-                <Link
-                  href="https://linkedin.com/in/wahyusattriana"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="LinkedIn Profile"
-                >
-                  <Linkedin className="h-4 w-4" />
-                </Link>
-              </Button>
-              <Button variant="outline" size="icon" asChild>
-                <Link href="mailto:wahyusattriana@gmail.com" aria-label="Send Email">
-                  <Mail className="h-4 w-4" />
-                </Link>
-              </Button>
-              <Button variant="outline" size="icon" asChild>
-                <Link
-                  href="https://www.instagram.com/wahyusttrn"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Instagram Profile"
-                >
-                  <Instagram className="h-4 w-4" />
-                </Link>
-              </Button>
-              <Button variant="outline" size="icon" asChild>
-                <Link
-                  href="https://www.youtube.com/@wahyusattriana"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="YouTube Channel"
-                >
-                  <Youtube className="h-4 w-4" />
-                </Link>
-              </Button>
-              <Button variant="outline" size="icon" asChild>
-                <Link
-                  href="https://medium.com/@wahyusattriana"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Medium Blog"
-                >
-                  <BookOpenText className="h-4 w-4" />
-                </Link>
-              </Button>
+              {socials.map((e, i) => {
+                return (
+                  <Button key={i} variant="outline" size="icon" asChild>
+                    <Link href={e.link} target="_blank" rel="noopener noreferrer" aria-label={e.label}>
+                      <e.icon className="h-4 w-4" />
+                    </Link>
+                  </Button>
+                );
+              })}
             </div>
           </div>
         </ScrollAnimation>
@@ -229,10 +224,7 @@ export default function HomePage() {
               of visual graphics.
             </p>
             <p className="leading-7">I am based in Bali, Indonesia and I'm very open to be hired anywhere (i think).</p>
-            <Link
-              target="_blank"
-              href={'https://drive.google.com/file/d/16ei5IZldw67bnJLwzktjYKZPtb5bG3QC/view?usp=sharing'}
-            >
+            <Link target="_blank" href={resume}>
               <p className="leading-7 italic hover:underline">Curiculum Vitae (CV) / resume here.</p>
             </Link>
           </section>

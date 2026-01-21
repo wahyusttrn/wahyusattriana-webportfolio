@@ -1,3 +1,11 @@
+if (typeof window === 'undefined' && typeof localStorage !== 'undefined') {
+  try {
+    delete global.localStorage;
+  } catch (e) {
+    console.warn('Failed to clean up localStorage on server', e);
+  }
+}
+
 import { Inter } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from '@/components/theme-provider';

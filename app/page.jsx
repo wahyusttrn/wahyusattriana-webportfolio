@@ -37,28 +37,53 @@ const skills = [
 
 const experiences = [
   {
+    company: 'One Techno',
+    role: 'Software Engineer',
+    description: '',
+    date: '2026 - Present',
+    month: (new Date().getFullYear() - 2026) * 12 + (new Date().getMonth() - 0)
+  },
+  {
+    company: 'BoltBlue',
+    role: 'Web Developer',
+    description: '',
+    date: '2025 - Present',
+    month: (new Date().getFullYear() - 2025) * 12 + (new Date().getMonth() - 9)
+  },
+  {
+    company: 'Forage (Virtual Internship)',
+    role: 'Software Engineer',
+    description: '',
+    date: '2025 - 2025',
+    month: 1
+  },
+  {
     company: 'Forum OSIS Nasional',
     role: 'Head of Creative and Designs Departement',
     description: '',
-    date: '2024 - 2025'
+    date: '2024 - 2025',
+    month: 12
   },
   {
     company: 'Makmur Raya',
     role: 'Social Media Designer',
     description: '',
-    date: '2024 - 2025'
+    date: '2024 - 2025',
+    month: 2
   },
   {
     company: 'Singarockland',
     role: 'Part of Media and Creative',
     description: '',
-    date: '2024 - 2024'
+    date: '2024 - 2024',
+    month: 2
   },
   {
     company: 'Eiji Sushi',
     role: 'Designer and Social Media Manager',
     description: '',
-    date: '2023 - 2024'
+    date: '2023 - 2024',
+    month: 10
   }
 ];
 
@@ -67,13 +92,15 @@ const educations = [
     school: 'Hacktiv8 Indonesia',
     role: 'Fullstack JavaScript Immersive Student',
     description: '',
-    date: '2025 - 2025'
+    date: '2025 - 2025',
+    month: 4
   },
   {
     school: 'SMA Negeri 1 Singaraja',
     role: 'Student Council President and Head Of Robotics Club',
     description: '',
-    date: '2022 - 2025'
+    date: '2022 - 2025',
+    month: 36
   }
 ];
 
@@ -248,14 +275,22 @@ export default function HomePage() {
         <ScrollAnimation animateId="experience" className="mb-12 scroll-mt-20">
           <section id="experience">
             <h2 className="scroll-m-20 text-2xl font-semibold tracking-tight mb-6">Experience</h2>
-            <div className="space-y-6">
+            <div className="sm:space-y-6 space-y-10">
               {experiences.map((exp, index) => (
-                <article key={index} className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-4">
+                <article
+                  key={index}
+                  className="flex flex-col sm:flex-row sm:justify-between sm:items-start sm:gap-4 gap-1"
+                >
                   <div className="flex-1">
                     <h3 className="text-lg font-medium">{exp.company}</h3>
                     <h4 className="text-sm text-muted-foreground mb-2">{exp.role}</h4>
                   </div>
-                  <time className="text-sm text-muted-foreground sm:whitespace-nowrap">{exp.date}</time>
+                  <div className="flex flex-col sm:items-end">
+                    <time className="text-sm text-muted-foreground sm:whitespace-nowrap">{exp.date}</time>
+                    <p className="text-xs text-muted-foreground italic">
+                      {exp.month} {exp.month > 1 ? 'mos' : 'mo'}
+                    </p>
+                  </div>
                 </article>
               ))}
             </div>
@@ -265,14 +300,22 @@ export default function HomePage() {
         <ScrollAnimation animateId="education" className="mb-12 scroll-mt-20">
           <section id="education">
             <h2 className="scroll-m-20 text-2xl font-semibold tracking-tight mb-6">Education</h2>
-            <div className="space-y-6">
+            <div className="sm:space-y-6 space-y-10">
               {educations.map((edu, index) => (
-                <article key={index} className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-4">
+                <article
+                  key={index}
+                  className="flex flex-col sm:flex-row sm:justify-between sm:items-start sm:gap-4 gap-1"
+                >
                   <div className="flex-1">
                     <h3 className="text-lg font-medium">{edu.school}</h3>
                     <h4 className="text-sm text-muted-foreground mb-2">{edu.role}</h4>
                   </div>
-                  <time className="text-sm text-muted-foreground sm:whitespace-nowrap">{edu.date}</time>
+                  <div className="flex flex-col sm:items-end">
+                    <time className="text-sm text-muted-foreground sm:whitespace-nowrap">{edu.date}</time>
+                    <p className="text-xs text-muted-foreground italic">
+                      {edu.month} {edu.month > 1 ? 'mos' : 'mo'}
+                    </p>
+                  </div>
                 </article>
               ))}
             </div>

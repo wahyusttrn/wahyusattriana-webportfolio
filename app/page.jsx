@@ -65,20 +65,6 @@ const experiences = [
     month: 12
   },
   {
-    company: 'Makmur Raya',
-    role: 'Social Media Designer',
-    description: '',
-    date: '2024 - 2025',
-    month: 2
-  },
-  {
-    company: 'Singarockland',
-    role: 'Part of Media and Creative',
-    description: '',
-    date: '2024 - 2024',
-    month: 2
-  },
-  {
     company: 'Eiji Sushi',
     role: 'Designer and Social Media Manager',
     description: '',
@@ -108,14 +94,14 @@ const projects = [
   {
     title: 'Smart Spend Assistant',
     description: 'A seamless AI powered money manager app',
-    tags: ['NextJS', 'TypeScript', 'MongoDB', 'Zod', 'React Native', 'OpenAI', 'Xendit'],
+    tags: ['Next.js', 'TypeScript', 'MongoDB', 'Zod', 'React Native', 'OpenAI', 'Xendit'],
     type: 'direct',
     link: 'https://github.com/SmartSpendAssistant-AsyncProject'
   },
   {
     title: 'Everylity App',
     description: 'An e-commerce web applications built using fullstack Next.js',
-    tags: ['NextJS', 'TypeScript', 'MongoDB', 'Zod', 'Shadcn'],
+    tags: ['Next.js', 'TypeScript', 'MongoDB', 'Zod', 'Shadcn'],
     type: 'direct',
     link: 'https://github.com/wahyusttrn/everylity-ecommerce'
   },
@@ -129,31 +115,9 @@ const projects = [
   {
     title: 'Greets App',
     description: 'Real Time Chat App, with AI Assistant',
-    tags: ['ReactJS', 'Vite', 'Express', 'Sequelize', 'PostgreSQL', 'Axios', 'WebSocket', 'OpenAI', 'TDD'],
+    tags: ['React.js', 'Vite', 'Express', 'Sequelize', 'PostgreSQL', 'Axios', 'WebSocket', 'OpenAI', 'TDD'],
     type: 'direct',
     link: 'https://github.com/Greets-RMT62'
-  },
-  {
-    title: 'Shred App',
-    description: 'Task manager app built under ExcalidrawAPI and GeminiAI',
-    tags: ['ReactJS', 'Vite', 'Express', 'Sequelize', 'PostgreSQL', 'Axios', 'Tailwind', 'Shadcn'],
-    type: 'direct',
-    link: 'https://github.com/wahyusttrn/shred-app'
-  },
-  {
-    title: 'Skelvia App',
-    description: 'Educational prototype web-app built under monolith architecture',
-    tags: ['Express', 'EJS', 'Sequelize', 'PostgreSQL', 'Tailwind', 'DaisyUI'],
-    type: 'direct',
-    link: 'https://github.com/wahyusttrn/skelvia-app'
-  },
-  {
-    title: 'Prelo App',
-    description: 'E-commerce platform to dig the fundamental web development',
-    tags: ['HTML', 'CSS', 'JavaScript', 'DOM', 'Bootstrap'],
-    type: 'multiple',
-    demo: 'https://wahyusttrn.github.io/prelo-app/',
-    github: 'https://github.com/wahyusttrn/prelo-app'
   }
 ];
 
@@ -204,7 +168,7 @@ export default function HomePage() {
       <div id="home" className="h-full max-w-3xl flex flex-col justify-center pt-20 container mx-auto px-4">
         <ScrollAnimation animateId="header" className="mb-4 flex sm:flex-row flex-col items-start gap-6">
           <div className="w-24 h-24 rounded-full bg-muted flex-shrink-0 overflow-hidden">
-            <img src="/myPic.png" alt="Wahyu Sattriana Profile Picture" className="w-full h-full object-cover" />
+            <img src="/Profile.webp" alt="Wahyu Sattriana Profile Picture" className="w-full h-full object-cover" />
           </div>
 
           <div className="flex-1">
@@ -388,11 +352,18 @@ export default function HomePage() {
               Hey, I'm always open to discuss new projects, creative ideas, or opportunities to be part of your vision.
               Feel free to just DM me right away!
             </p>
-            <Button asChild>
-              <Link href="https://www.instagram.com/wahyusttrn" target="_blank" rel="noopener noreferrer">
-                Chat me
-              </Link>
-            </Button>
+            <div className="flex gap-3">
+              <Button asChild>
+                <Link href="mailto:wahyusattriana@gmail.com" target="_blank" rel="noopener noreferrer">
+                  Email me
+                </Link>
+              </Button>
+              <Button asChild variant="outline">
+                <Link href="https://www.instagram.com/wahyusttrn" target="_blank" rel="noopener noreferrer">
+                  Direct Message
+                </Link>
+              </Button>
+            </div>
           </section>
         </ScrollAnimation>
 

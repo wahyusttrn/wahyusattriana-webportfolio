@@ -14,23 +14,25 @@ import Link from 'next/link';
 
 const skills = [
   'Leadership',
-  'HTML/CSS',
   'Tailwind',
   'JavaScript',
   'TypeScript',
-  'ReactJS',
-  'NextJS',
+  'React.js',
+  'Next.js',
   'React Native',
+  'Graphic Design',
+  'WordPress',
+  'Elementor',
   'Express',
-  'Sequelize',
-  'PostgreSQL',
+  'ORMs',
+  'SQL',
   'MongoDB',
   'Redis',
-  'Git Workflow',
-  'REST API',
+  'Git',
   'GraphQL',
   'WebSocket',
-  'Graphic Design'
+  'PHP',
+  'Laravel'
 ];
 
 const experiences = [
@@ -233,9 +235,9 @@ export default function HomePage() {
         <ScrollAnimation animateId="skills" className="mb-12 scroll-mt-20">
           <section id="skills">
             <h2 className="scroll-m-20 text-2xl font-semibold tracking-tight mb-4">Skills</h2>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
               {skills.map((skill) => (
-                <div key={skill} className="bg-muted rounded-md p-3 text-center">
+                <div key={skill} className="bg-muted rounded-md p-2 text-center text-sm">
                   {skill}
                 </div>
               ))}

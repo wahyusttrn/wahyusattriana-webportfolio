@@ -167,7 +167,7 @@ const socials = [
   }
 ];
 
-const resume = 'https://drive.google.com/file/d/1Lnaed2orCFgy94QuyvDes6JkWySG7A-l/view?usp=sharing';
+const resume = process.env.RESUME_URL || '';
 
 export default function HomePage() {
   return (

@@ -168,7 +168,7 @@ export default function HomePage() {
       <div id="home" className="h-full max-w-3xl flex flex-col justify-center pt-20 container mx-auto px-4">
         <ScrollAnimation animateId="header" className="mb-4 flex sm:flex-row flex-col items-start gap-6">
           <div className="w-24 h-24 rounded-full bg-muted flex-shrink-0 overflow-hidden">
-            <img src="/Profile.webp" alt="Wahyu Sattriana Profile Picture" className="w-full h-full object-cover" />
+            <img src="/Profile-2.webp" alt="Wahyu Sattriana Profile Picture" className="w-full h-full object-cover" />
           </div>
 
           <div className="flex-1">

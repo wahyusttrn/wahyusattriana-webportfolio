@@ -218,7 +218,7 @@ export default function HomePage() {
             </p>
             <p className="leading-7">I am based in Bali, Indonesia and I'm very open to be hired anywhere (i think).</p>
             <Link target="_blank" href={resume}>
-              <p className="leading-7 italic hover:underline">Curiculum Vitae (CV) / resume here.</p>
+              <p className="leading-7 italic underline">Curiculum Vitae (CV) / resume here.</p>
             </Link>
           </section>
         </ScrollAnimation>

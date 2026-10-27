@@ -11,11 +11,15 @@ import './globals.css';
 import { ThemeProvider } from '@/components/theme-provider';
 import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import { profile } from '@/data/profile';
 
 // Variable width axis powers the expanded display type
 const archivo = Archivo({ subsets: ['latin'], axes: ['wdth'], variable: '--font-archivo' });
 
+// Canonical URLs and the share image resolve against the site's main domain.
+// Each page sets its own canonical; setting it here would point /cv at the home page.
 export const metadata = {
+  metadataBase: new URL(profile.website),
   title: 'Wahyu Sattriana - Software Engineer',
   description:
     'Software Engineer based in Bali, Indonesia. Building websites, internal tools, and AI-integrated apps. View my portfolio, projects, and experience.',
@@ -35,11 +39,12 @@ export const metadata = {
     title: 'Wahyu Sattriana - Software Engineer',
     description:
       'Software Engineer based in Bali, Indonesia. Building websites, internal tools, and AI-integrated apps.',
-    url: 'https://wahyusattriana.com',
+    url: '/',
     siteName: 'Wahyu Sattriana Portfolio',
     locale: 'en_US',
     type: 'website'
   },
+  twitter: { card: 'summary_large_image' },
   robots: {
     index: true,
     follow: true,
@@ -57,7 +62,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${archivo.variable} overflow-x-hidden`}>
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           {children}
         </ThemeProvider>
         <Analytics />

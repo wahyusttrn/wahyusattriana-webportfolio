@@ -34,3 +34,21 @@
     color: #121212;
   }
 }
+
+/* The /cv page prints as A4 sheets with its own margins */
+@page {
+  size: A4;
+  margin: 0;
+}
+
+@media print {
+  html,
+  body {
+    background: #fff !important;
+  }
+
+  * {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+}

@@ -194,7 +194,7 @@ export default function HomePage() {
     <div className="px-4 lg:px-8">
       <header className="grid grid-cols-2 lg:grid-cols-12 gap-x-4 gap-y-2 py-3.5 border-b border-ink text-[13px] font-medium">
         <span className="lg:col-span-3">Wahyu Sattriana</span>
-        <span className="hidden lg:block lg:col-span-3">Fullstack JavaScript Engineer</span>
+        <span className="hidden lg:block lg:col-span-3">Software Engineer</span>
         <span className="text-right lg:text-left lg:col-span-3 text-dim">
           Bali <BaliClock />
         </span>
@@ -238,8 +238,8 @@ export default function HomePage() {
           <div className="lg:col-span-8">
             <p className="mb-5 text-[clamp(20px,2.2vw,30px)] leading-tight font-semibold">
               <s className="text-dim font-medium decoration-hot decoration-[3px]">Graphic designer</s>{' '}
-              <s className="text-dim font-medium decoration-hot decoration-[3px]">Social media manager</s> Fullstack
-              JavaScript engineer.
+              <s className="text-dim font-medium decoration-hot decoration-[3px]">Social media manager</s> Software
+              engineer.
             </p>
             <p className="text-[clamp(26px,3.4vw,50px)] leading-[1.08] font-medium tracking-[-0.015em]">
               I build websites, internal tools and AI-integrated apps.{' '}

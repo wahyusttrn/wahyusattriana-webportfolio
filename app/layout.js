@@ -18,7 +18,7 @@ const archivo = Archivo({ subsets: ['latin'], axes: ['wdth'], variable: '--font-
 export const metadata = {
   title: 'Wahyu Sattriana - Software Engineer',
   description:
-    'Software Engineer Based in Bali, Indonesia. Fullstack JavaScript Developer specializing in Node.js, React, Next.js, and modern web technologies. View my portfolio, projects, and experience.',
+    'Software Engineer based in Bali, Indonesia. Building websites, internal tools, and AI-integrated apps. View my portfolio, projects, and experience.',
   keywords: [
     'Wahyu Sattriana',
     'Software Engineer',
@@ -34,7 +34,7 @@ export const metadata = {
   openGraph: {
     title: 'Wahyu Sattriana - Software Engineer',
     description:
-      'Software Engineer Based in Bali, Indonesia. Fullstack JavaScript Developer specializing in Node.js, React, Next.js, and modern web technologies.',
+      'Software Engineer based in Bali, Indonesia. Building websites, internal tools, and AI-integrated apps.',
     url: 'https://wahyusattriana.com',
     siteName: 'Wahyu Sattriana Portfolio',
     locale: 'en_US',

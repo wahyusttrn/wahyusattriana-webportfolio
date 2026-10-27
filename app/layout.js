@@ -6,13 +6,14 @@ if (typeof window === 'undefined' && typeof localStorage !== 'undefined') {
   }
 }
 
-import { Inter } from 'next/font/google';
+import { Archivo } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from '@/components/theme-provider';
 import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 
-const inter = Inter({ subsets: ['latin'] });
+// Variable width axis powers the expanded display type
+const archivo = Archivo({ subsets: ['latin'], axes: ['wdth'], variable: '--font-archivo' });
 
 export const metadata = {
   title: 'Wahyu Sattriana - Software Engineer',
@@ -55,7 +56,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
+      <body className={`${archivo.variable} overflow-x-hidden`}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
           {children}
         </ThemeProvider>

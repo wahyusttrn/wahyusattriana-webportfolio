@@ -2,6 +2,7 @@ import Image from 'next/image';
 import profilePhoto from '@/public/Profile-2.webp';
 import { BaliClock } from '@/components/bali-clock';
 import { ThemeToggle } from '@/components/theme-toggle';
+import { Duration, CurrentYear } from '@/components/live-date';
 import { profile, socials, experiences, educations, projects, skills } from '@/data/profile';
 import { withDuration } from '@/lib/dates';
 
@@ -60,14 +61,14 @@ function SectionHeading({ num, title }) {
   );
 }
 
-function Row({ name, role, date, month, description }) {
+function Row({ name, role, date, month, start, end, description }) {
   return (
     <article className="group border-t border-ink last:border-b transition-colors duration-200 hover:bg-ink hover:text-paper">
       <div className={`grid lg:grid-cols-12 gap-x-4 gap-y-2 pt-5 pb-7 ${wrap}`}>
         <p className="lg:col-span-3 text-sm font-medium text-dim transition-colors duration-200 group-hover:text-hot">
           {date}
           <span className="block text-xs">
-            {month} {month > 1 ? 'mos' : 'mo'}
+            <Duration start={[start.getFullYear(), start.getMonth()]} ongoing={!end} initial={month} />
           </span>
         </p>
         <h3 className="lg:col-span-4 text-[clamp(26px,2.6vw,38px)] leading-[1.02] font-extrabold tracking-[-0.02em] [font-stretch:112%]">
@@ -253,7 +254,7 @@ export default function HomePage() {
         <div className="border-t border-ink">
           <div className={`flex justify-between py-4 pb-6 text-[13px] text-dim ${wrap}`}>
             <span>
-              © {new Date().getFullYear()} {profile.name}
+              © <CurrentYear initial={new Date().getFullYear()} /> {profile.name}
             </span>
             <span>Bali, Indonesia</span>
           </div>

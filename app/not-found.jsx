@@ -1,4 +1,5 @@
 import { profile } from '@/data/profile';
+import { CurrentYear } from '@/components/live-date';
 
 // Overrides the layout's "index, follow" so it doesn't contradict the noindex Next.js adds
 export const metadata = {
@@ -58,7 +59,7 @@ export default function NotFound() {
       <footer className="border-t border-ink">
         <div className={`flex justify-between py-4 pb-6 text-[13px] text-dim ${wrap}`}>
           <span>
-            © {new Date().getFullYear()} {profile.name}
+            © <CurrentYear initial={new Date().getFullYear()} /> {profile.name}
           </span>
           <span>Bali, Indonesia</span>
         </div>

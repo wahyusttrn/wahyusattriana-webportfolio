@@ -1,4 +1,5 @@
-import { Github, Linkedin, Mail, Instagram, Youtube, BookOpenText, ExternalLink, Code } from 'lucide-react';
+import { Mail, BookOpenText, ExternalLink, Code } from 'lucide-react';
+import { Github, Linkedin, Instagram, Youtube } from '@/components/brand-icons';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import {
@@ -35,60 +36,90 @@ const skills = [
   'Laravel'
 ];
 
+const formatMonth = (date) => date.toLocaleString('en-US', { month: 'short', year: 'numeric' });
+
+// Inclusive month count, e.g. Nov 2025 - Nov 2025 = 1 mo
+const monthsBetween = (start, end) =>
+  (end.getFullYear() - start.getFullYear()) * 12 + (end.getMonth() - start.getMonth()) + 1;
+
+// start and end use new Date(year, monthIndex), end: null means present
+const withDuration = (item) => ({
+  ...item,
+  date: `${formatMonth(item.start)} - ${item.end ? formatMonth(item.end) : 'Present'}`,
+  month: monthsBetween(item.start, item.end ?? new Date())
+});
+
 const experiences = [
   {
-    company: 'One Techno',
-    role: 'Software Engineer',
-    description: '',
-    date: '2026 - Present',
-    month: (new Date().getFullYear() - 2026) * 12 + (new Date().getMonth() - 0)
+    company: 'Makmoor.com (POS Systems)',
+    role: 'Founder',
+    description: [
+      'AI-assisted development using React Native, Express, and PostgreSQL.',
+      'Handle social media posts and marketing strategies.',
+      'Manage sales and customer service.'
+    ],
+    start: new Date(2026, 3),
+    end: null
+  },
+  {
+    company: 'Content Creator',
+    role: 'Self-employed',
+    description: [
+      'Create long and short form content about work, life, and experiments.',
+      'Human-made content and process, from scriptwriting to editing and resources.'
+    ],
+    start: new Date(2026, 3),
+    end: null
   },
   {
     company: 'BoltBlue',
-    role: 'Web Developer',
-    description: '',
-    date: '2025 - Present',
-    month: (new Date().getFullYear() - 2025) * 12 + (new Date().getMonth() - 9)
+    role: 'Web Developer / Software Engineer',
+    description: [
+      'Build and maintain 130+ WordPress-Elementor and Next.js websites for Australian companies.',
+      'Develop AI-integrated internal tools such as an Auto Image Sorter and Claude workflow skills that integrate Claude with WordPress through SSH connections.',
+      'Manage the tracking pipeline to monitor leads and conversions with GTM, GA4, and Google Ads.',
+      "Maintain clients' internal automation systems and CRMs such as Zapier, GHL, Mindbody, and more."
+    ],
+    start: new Date(2025, 10),
+    end: null
   },
   {
-    company: 'Forage (Virtual Internship)',
-    role: 'Software Engineer',
-    description: '',
-    date: '2025 - 2025',
-    month: 1
-  },
-  {
-    company: 'Forum OSIS Nasional',
-    role: 'Head of Creative and Designs Departement',
-    description: '',
-    date: '2024 - 2025',
-    month: 12
-  },
-  {
-    company: 'Eiji Sushi',
-    role: 'Designer and Social Media Manager',
-    description: '',
-    date: '2023 - 2024',
-    month: 10
+    company: 'EIJI Sushi',
+    role: 'Graphic Designer and Social Media Manager',
+    description: [
+      'Increased new customers by 20% through social media posts.',
+      'Captured product and real-moment photography.',
+      'Designed menu books and brochures, and directed a company video profile.',
+      'Built a product administration and registration system.'
+    ],
+    start: new Date(2023, 11),
+    end: new Date(2024, 8)
   }
-];
+].map(withDuration);
 
 const educations = [
   {
     school: 'Hacktiv8 Indonesia',
-    role: 'Fullstack JavaScript Immersive Student',
-    description: '',
-    date: '2025 - 2025',
-    month: 4
+    role: 'Fullstack JavaScript Bootcamp',
+    description: [
+      'Fast-paced learning with an intense schedule and material.',
+      'Challenges, live coding, debugging, pair programming, and a hackathon as final projects.'
+    ],
+    start: new Date(2025, 3),
+    end: new Date(2025, 7)
   },
   {
     school: 'SMA Negeri 1 Singaraja',
-    role: 'Student Council President and Head Of Robotics Club',
-    description: '',
-    date: '2022 - 2025',
-    month: 36
+    role: "2024's Student Council President and 2022-2024's Head of Electronics and Robotics Club",
+    description: [
+      'Top 100 National Best Student Council President by ISLC 2024.',
+      'Top 50 National Best Student Council President by IPB OSIS Fest 2024.',
+      'Led the Creative and Design Department at Forum OSIS Nasional XII.'
+    ],
+    start: new Date(2022, 6),
+    end: new Date(2025, 3)
   }
-];
+].map(withDuration);
 
 const projects = [
   {
@@ -161,6 +192,9 @@ const socials = [
 ];
 
 const resume = process.env.RESUME_URL || '';
+
+// Rebuild daily so "Present" month counts stay current
+export const revalidate = 86400;
 
 export default function HomePage() {
   return (
@@ -248,6 +282,11 @@ export default function HomePage() {
                   <div className="flex-1">
                     <h3 className="text-lg font-medium">{exp.company}</h3>
                     <h4 className="text-sm text-muted-foreground mb-2">{exp.role}</h4>
+                    <ul className="list-disc pl-5 space-y-1 text-sm leading-6">
+                      {exp.description.map((item) => (
+                        <li key={item}>{item}</li>
+                      ))}
+                    </ul>
                   </div>
                   <div className="flex flex-col sm:items-end">
                     <time className="text-sm text-muted-foreground sm:whitespace-nowrap">{exp.date}</time>
@@ -273,6 +312,11 @@ export default function HomePage() {
                   <div className="flex-1">
                     <h3 className="text-lg font-medium">{edu.school}</h3>
                     <h4 className="text-sm text-muted-foreground mb-2">{edu.role}</h4>
+                    <ul className="list-disc pl-5 space-y-1 text-sm leading-6">
+                      {edu.description.map((item) => (
+                        <li key={item}>{item}</li>
+                      ))}
+                    </ul>
                   </div>
                   <div className="flex flex-col sm:items-end">
                     <time className="text-sm text-muted-foreground sm:whitespace-nowrap">{edu.date}</time>

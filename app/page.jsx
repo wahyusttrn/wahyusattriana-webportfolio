@@ -1,3 +1,5 @@
+import Image from 'next/image';
+import profilePhoto from '@/public/Profile-2.webp';
 import { BaliClock } from '@/components/bali-clock';
 import { ThemeToggle } from '@/components/theme-toggle';
 
@@ -207,7 +209,15 @@ export default function HomePage() {
       </header>
 
       <main>
-        <h1 className="mt-7 text-[12vw] leading-[0.8] font-[850] tracking-[-0.02em] uppercase whitespace-nowrap [font-stretch:125%]">
+        <Image
+          src={profilePhoto}
+          alt="Wahyu Sattriana"
+          width={200}
+          height={200}
+          priority
+          className="lg:hidden mt-6 size-[clamp(96px,28vw,200px)] object-cover"
+        />
+        <h1 className="mt-5 lg:mt-7 text-[12vw] leading-[0.8] font-[850] tracking-[-0.02em] uppercase whitespace-nowrap [font-stretch:125%]">
           Wahyu
           <br />
           Sattriana<span className="text-hot">.</span>
@@ -215,6 +225,13 @@ export default function HomePage() {
 
         <section className="grid lg:grid-cols-12 gap-x-4 gap-y-6 pt-12 pb-14">
           <p className="lg:col-span-3 text-[13px] font-medium">
+            <Image
+              src={profilePhoto}
+              alt="Wahyu Sattriana"
+              width={176}
+              height={176}
+              className="hidden lg:block mb-4 size-44 object-cover"
+            />
             Currently at BoltBlue
             <span className="block text-dim">Founder of Makmoor.com</span>
           </p>

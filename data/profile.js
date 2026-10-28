@@ -25,7 +25,7 @@ export const socials = {
 export const experiences = [
   {
     name: 'BoltBlue',
-    role: 'Web Developer / Software Engineer',
+    role: 'Remote Web Developer / Software Engineer',
     description: [
       'Build and maintain 130+ WordPress-Elementor and Next.js websites for Australian companies.',
       'Develop AI-integrated internal tools such as an Auto Image Sorter and Claude workflow skills that integrate Claude with WordPress through SSH connections.',
